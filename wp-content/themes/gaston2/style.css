@@ -474,7 +474,7 @@ ul.post-categories a {
 }
 
 .description-book span{
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 900;
 }
 .content-book{
@@ -492,7 +492,7 @@ ul.post-categories a {
   height: 500px;
   z-index: 2;
   position: absolute;
-  left: 13%;
+  left: 9%;
   top: 15%;
 }
 .bx-viewport{
@@ -903,7 +903,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   font-size: 32px;
   font-family: 'Muli', sans-serif;
   font-weight:bold;
-  margin-top: 55px;
+  margin-top: 5px;
 }
 
 .text-subtitle{
@@ -1422,6 +1422,10 @@ input[type=email], textarea.materialize-textarea {
 }
 /*fin footer*/
 @media only screen and (max-width: 1200px) and (min-width: 992px){
+  .description-book span {
+    font-size: 28px;
+    font-weight: 900;
+}
   .text-titulo {
     font-size: 14px;
   }
@@ -1483,14 +1487,6 @@ input[type=email], textarea.materialize-textarea {
   .tumbs-galeria-vid .bx-controls .bx-wrapper .bx-pager {
 
     display: none;
-  }
-
-  .image-book {
-    width: 239px;
-    z-index: 2;
-    position: absolute;
-    left: 9%;
-    top: 15%;
   }
 
   .description-book {
@@ -2327,14 +2323,14 @@ input[type=email], textarea.materialize-textarea {
     height: 277px;
   }
 
-  .image-book {
+/*  .image-book {
     width: 216px !important;
     z-index: 2;
     position: absolute;
     left: 6%;
     top: 15%;
     height: 313px !important;
-  }
+  }*/
   .tumbs-galeria-vid .bx-wrapper .bx-viewport {
     -moz-box-shadow: 0 0 5px #ccc;
     -webkit-box-shadow: 0 0 5px #ccc;
@@ -2638,13 +2634,6 @@ input[type=email], textarea.materialize-textarea {
     bottom: 35px;
     z-index: 3;
   }
-  .image-book {
-    width: 232px;
-    z-index: 2;
-    position: absolute;
-    left: 0%;
-    top: 15%;
-  }
 
   .description-book {
     font-family: 'Lato', sans-serif;
@@ -2715,13 +2704,6 @@ input[type=email], textarea.materialize-textarea {
     transform: translatez(0);
     height: 643px !important;
   }
-  .image-book {
-    width: 248px;
-    z-index: 2;
-    position: absolute;
-    left: 13%;
-    top: 15%;
-  }
   /**slider single**/
   .slider-single-taps .bx-viewport {
     width: 100%;
@@ -2770,13 +2752,13 @@ input[type=email], textarea.materialize-textarea {
     width: 100%;
     height: 570px;
   }
-  .image-book {
-    /*width: 330px !important;*/
+/*  .image-book {
+    width: 330px !important;
     z-index: 2;
     position: absolute;
     left: 0% !important;
     top: 15%;
-  }
+  }*/
   /***slider autores**/
   .autores-slider .bx-wrapper .bx-viewport {
     -moz-box-shadow: 0 0 5px #ccc;
@@ -2898,6 +2880,10 @@ input[type=email], textarea.materialize-textarea {
 }
 
 @media only screen and (max-width:1440px) and (min-width: 768px){
+  .description-book span {
+    font-size: 24px;
+    font-weight: 900;
+}
 
   .slider-normal .bx-wrapper .bx-viewport {
     -moz-box-shadow: 0 0 5px #ccc;
@@ -2942,10 +2928,7 @@ input[type=email], textarea.materialize-textarea {
   }
   .image-book {
     width: 325px;
-    z-index: 2;
-    position: absolute;
-    left: 8%;
-    top: 15%;
+    left: 0%;
   }
   .content-book {
     font-family: 'Lato', sans-serif;
@@ -3039,4 +3022,43 @@ input[type=email], textarea.materialize-textarea {
     text-align: center;
     letter-spacing: 6px;
   }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 992px){
+.image-book {
+    width: 261px;
+    left: 0%;
+    height: 347px;
+    top: 27%;
+}
+.description-book span {
+    font-size: 18px;
+    font-weight: 900;
+}
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px){
+.image-book {
+    width: 261px;
+    left: 15%;
+    height: 347px;
+    top: 27%;
+}
+.description-book span {
+    font-size: 16px;
+    font-weight: 900;
+}
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px){
+.image-book {
+    width: 261px;
+    left: 0%;
+    height: 347px;
+    top: 27%;
+}
+.description-book span {
+    font-size: 16px;
+    font-weight: 900;
+}
 }

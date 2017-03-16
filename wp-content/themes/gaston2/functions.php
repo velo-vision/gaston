@@ -42,3 +42,20 @@ return $contactmethods;
 }
 
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
+
+
+//reducir conteido para mostrar expert o content
+
+ function wpdocs_custom_excerpt_length( $length ) {
+     return 50;
+ }
+ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function limitar_palabras( $str, $num, $append_str='' ) {
+  $palabras = preg_split( '/[\s]+/', $str, -1, PREG_SPLIT_OFFSET_CAPTURE );
+  if( isset($palabras[$num][1]) ){
+    $str = substr( $str, 0, $palabras[$num][1] ) . $append_str;
+  }
+  unset( $palabras, $num );
+  return trim( $str );
+}

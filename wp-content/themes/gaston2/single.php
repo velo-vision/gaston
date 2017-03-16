@@ -86,12 +86,12 @@
           <div class="col l12 m12 s12 tags" style="margin-top:50px;">
             <p class="nomargin borde-tags">ARTÍCULOS SUGERIDOS</p>
           </div>
-          <div class="col l12 m12 s12 text-imagen slider-articulos slider-single-taps"><!---->
+          <div class="col l12 m12 s12 text-imagen slider-articulos slider-single-taps">
           
             <?php 
            // $ran=mt_rand(8,12);
             //echo $ran;    
-            $args = array( "posts_per_page" => 3, "offset"=>0, "the_category" =>1,);
+            $args = array( "posts_per_page" => 5, "offset"=>0, "the_category" =>19,);
             $myposts = get_posts( $args ); ?>
             <ul id="sliderseis">            
           <?php           
@@ -102,19 +102,21 @@
               <div class="col l12 m12 s12">
               <div class="s12 m12 l12">
                   <?php $video = get_post_meta($post->ID, 'video1', true);
-                    if (!empty($video)){                
-                        echo "<iframe class='video2' height='554' src='https://www.youtube.com/embed/".$video."' frameborder='0' allowfullscreen></iframe>";
-                    }else{
-                        if (has_post_thumbnail()){
-                            $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );                    
-//echo "<img src='". $url."' class='img_articulos_bg' />";
-                            echo '<li class="fondo-pagevideo2" style="background: url('. $url.')">';   
-                        }
-                    } ?>
+                   if (!empty($video)){                
+                       echo "<iframe class='video2' height='554' src='https://www.youtube.com/embed/".$video."' frameborder='0' allowfullscreen></iframe>";
+                      }elseif (!empty(has_post_thumbnail())){
+                                $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );                    
+                               echo '<img class="fondo-pagevideo2" src="'. $url.'">';  
+                              }
+                    else{
+                        echo "no hay imagen o video disponible";
+                      }
+                       ?>
                 </div>
                 <div class="col l12 historial-title">
                   <p><?php the_title(); ?></p>
-                </div>            
+                </div> 
+
               </div>
               </a>            
             </div>

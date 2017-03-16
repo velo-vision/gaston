@@ -125,7 +125,10 @@
                   </div>
                   <div class="col s12 m6 l7 fondolibros" style='position: relative;'>
                     <p class="description-book">LIBRO RECOMENDADO DEL MES<br><span><?php echo $value->post_title; ?></span></p>
-                    <p class="content-book"><?php echo $value->post_content; ?></p>                  
+
+                    <?php $textoLargo= get_the_excerpt();
+                      $textoCorto=limitar_palabras($textoLargo, 50,'&#91;...&#93;&nbsp;&nbsp;'); ?>           
+                    <p class="content-book"><?php echo $textoCorto ?></p>                  
                   </div>
               </div>
           </li>           
