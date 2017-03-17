@@ -59,3 +59,102 @@ function limitar_palabras( $str, $num, $append_str='' ) {
   unset( $palabras, $num );
   return trim( $str );
 }
+
+// Mas leidos
+
+// function shapeSpace_popular_posts($post_id) {
+//   $count_key = 'popular_posts';
+//   $count = get_post_meta($post_id, $count_key, true);
+//   if ($count == '') {
+//     $count = 0;
+//     delete_post_meta($post_id, $count_key);
+//     add_post_meta($post_id, $count_key, '0');
+//   } else {
+//     $count++;
+//     update_post_meta($post_id, $count_key, $count);
+//   }
+// }
+// function shapeSpace_track_posts($post_id) {
+//   if (!is_single()) return;
+//   if (empty($post_id)) {
+//     global $post;
+//     $post_id = $post->ID;
+//   }
+//   shapeSpace_popular_posts($post_id);
+// }
+// add_action('wp_head', 'shapeSpace_track_posts');
+
+// function wpb_set_post_views($postID) {
+//     $count_key = 'wpb_post_views_count';
+//     $count = get_post_meta($postID, $count_key, true);
+//     if($count==''){
+//         $count = 0;
+//         delete_post_meta($postID, $count_key);
+//         add_post_meta($postID, $count_key, '0');
+//     }else{
+//         $count++;
+//         update_post_meta($postID, $count_key, $count);
+//     }
+// }
+// //To keep the count accurate, lets get rid of prefetching
+// remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+// function wpb_track_post_views ($post_id) {
+//     if ( !is_single() ) return;
+//     if ( empty ( $post_id) ) {
+//         global $post;
+//         $post_id = $post->ID;    
+//     }
+//     wpb_set_post_views($post_id);
+// }
+// add_action( 'wp_head', 'wpb_track_post_views');
+
+
+// function wpb_get_post_views($postID){
+//     $count_key = 'wpb_post_views_count';
+//     $count = get_post_meta($postID, $count_key, true);
+//     if($count==''){
+//         delete_post_meta($postID, $count_key);
+//         add_post_meta($postID, $count_key, '0');
+//         return "0 View";
+//     }
+//     return $count.' Views';
+// }
+
+
+
+$args = array(
+  'numberposts' => 3,
+  'offset' => 0,
+  'category' => 0,
+  'orderby' => 'post_date',
+  'order' => 'DESC',
+  'include' => '',
+  'exclude' => '',
+  'meta_key' => '',
+  'meta_value' =>'',
+  'post_type' => 'post',
+  'post_status' => 'draft, publish, future, pending, private',
+  'suppress_filters' => true
+);
+
+$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+
+
+
+
+/*
+ * Set post views count using post meta
+ */
+function setPostViews($postID) {
+    $countKey = 'post_views_count';
+    $count = get_post_meta($postID, $countKey, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $countKey);
+        add_post_meta($postID, $countKey, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $countKey, $count);
+    }
+}

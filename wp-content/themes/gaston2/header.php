@@ -46,7 +46,7 @@
         <ul class="right hide-on-med-and-down ">
           <li><a href="<?php echo site_url("?page_id=125");?>" class="animsition-link" >Lifestyle</a></li>
           <li><a href="<?php echo site_url("?page_id=130");?>" class="animsition-link" >Articulos</a></li>
-          <li <?php if(is_category("19")) echo 'class="active"'; ?>><a href="<?php echo get_category_link(19); ?>" class="animsition-link">Videos</a></li>
+          <!-- <li <?php if(is_category("19")) echo 'class="active"'; ?>><a href="<?php echo get_category_link(19); ?>" class="animsition-link">Videos</a></li> -->
           <li><a href="#contacto" >Contacto</a></li>
           <li><a href="#" style="height: 65px;"><?php get_search_form(); ?><img src="" ></a></li>
           <li><a href="https://www.facebook.com/gastonlombardit/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/face.png" alt="Gaston Lombardi" width="8px"></a></li>

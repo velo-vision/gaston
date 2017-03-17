@@ -2,6 +2,7 @@
 <!-- Contenido del post -->
 <?php if ( have_posts() ) : the_post(); ?>
 
+<?php   setPostViews(get_the_ID()); ?>
   <div class="row">
       <div class="col l10 offset-l1 m12 s12">
         <div class="col l12 m12 s12 titulo-anterior nomargin">
