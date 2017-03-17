@@ -144,7 +144,7 @@ $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
 
 
 /*
- * Set post views count using post meta
+ * ver post mas visitados
  */
 function setPostViews($postID) {
     $countKey = 'post_views_count';

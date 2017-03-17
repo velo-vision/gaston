@@ -45,12 +45,12 @@ get_header();
       </div>
     </div>
     <div class="col l12 m12 s12 margin-30">
-<?php
+<!-- <?php
   $args = array( 'numberposts' => '3' );
   $recent_posts = wp_get_recent_posts( $args );
-  foreach( $recent_posts as $recent ){?>
+  foreach( $recent_posts as $recent ){?> -->
 <!-- contenido -->
-    <div class="col l4 m6 s12" style="margin-bottom:20px;">
+    <!-- <div class="col l4 m6 s12" style="margin-bottom:20px;">
       <div class="col l12 m12 s12 size relative nopadding">
         <a href="<?php the_permalink(); ?>"></a>
         <div class="imggastonblog">
@@ -68,8 +68,13 @@ get_header();
         </div>
         <div class="col s12 m12 l12 nopadding nomargin">
           <div class="col l5 m8 s5 text-titulo nopadding">
-          <?php echo single_cat_title("", true); ?>
             <?php  //echo $recent["post_name"]; ?> 
+            <?php echo the_category() ;
+              single_cat_title('Artículos en la categoría: ',true);
+              echo get_the_category();
+              echo $recent["category"];
+            ?>
+            <?php //print_r($recent) ?>
           </div>
           <div class="col l7 m4 s7 text-fecha nopadding">
             <?php echo get_the_date( get_option('date_format') ); ?>
@@ -84,13 +89,58 @@ get_header();
             </div>
           </div>
         </div>      
-    </div>    
+    </div>     -->
 <!-- conetinido -->
-     <?php
+     <!-- <?php
      //var_dump($url);
   }
   wp_reset_query();
-?>
+?> -->
+
+
+<?php query_posts('showposts=3'); /* Con esta línea limitamos el resultado a 5 resultados */ ?>
+<?php if (have_posts()) : while (have_posts()) : the_post();?>
+    <!-- contenido -->
+    <div class="col l4 m6 s12" style="margin-bottom:20px;">
+      <div class="col l12 m12 s12 size relative nopadding">
+        <a href="<?php the_permalink(); ?>"></a>
+        <div class="imggastonblog">
+      <?php $video = get_post_meta($post->ID,'video1', true); //video1 es un campo personalizado, con custom fields
+       if (!empty($video)){                
+           echo "<iframe class='video33' height='500' src='https://www.youtube.com/embed/".$video."' frameborder='0' allowfullscreen></iframe>";
+          }elseif (!empty(has_post_thumbnail())){
+                     $url = wp_get_attachment_url( get_post_thumbnail_id() );
+                    echo '<li class="img_articulos_bg" style="background: url('. $url.')">'; 
+                  }
+        else{?>
+            <div class="col s12 m12 l12 center-align sombrita">
+              <p class='no-hay'>no hay imagen o video disponible</p>
+            </div>
+         <?php }
+           ?>     
+        </div>
+        <div class="col s12 m12 l12 nopadding nomargin">
+          <div class="col l5 m8 s5 text-titulo nopadding">
+            <?php echo the_category() ;?>              
+          </div>
+          <div class="col l7 m4 s7 text-fecha nopadding">
+            <?php echo get_the_date( get_option('date_format') ); ?>
+          </div>
+        </div>          
+          <div class="col l12 m12 s12 text-contenido">
+            <?php  echo the_title(); ?>  
+          </div>
+          <div class="col l12 m12 s8 offset-s2 text-boton margin-30">
+            <div class="col 12 m12 s8 titulo_articulos_home">
+              <a href="<?php the_permalink(); ?>">Leer más <i class="material-icons">arrow_forward</i></a>
+            </div>
+          </div>
+        </div>      
+    </div>    
+<!-- conetinido -->
+<?php endwhile; endif;?>
+
+
 </div>
 <div class="row nopadding">
   <div class="col s12 m12 l10 offset-l1 margin-70 nopadding">

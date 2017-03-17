@@ -115,6 +115,18 @@ input{
     width: 100%;
     height: 390px;
 }
+.no-hay{
+  font-family: "Roboto", sans-serif;
+  color:#000;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 31.5% 0;
+}
+.sombrita{
+  box-shadow: 2px 1px 6px 2px #000;
+  height: 389px;
+}
 .fondo-pagevideo2{
   background-size: 100% !important;
   background-position: center center !important;
@@ -707,7 +719,7 @@ ul.post-categories a {
   font-family: 'Muli', sans-serif;
   font-weight: 100;
   text-align: right;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .text-contenido{
@@ -1785,6 +1797,13 @@ input[type=email], textarea.materialize-textarea {
 }
 
 @media only screen and (max-width: 600px) and (min-width: 200px){
+     .sombrita{
+  height: auto;
+}
+    .video33 {
+    width: 100%;
+    height: 270px;
+}
   .video-arriba {
     position: relative;
     z-index: 1;
@@ -3027,6 +3046,17 @@ input[type=email], textarea.materialize-textarea {
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 992px){
+  .sombrita{
+  height: auto;
+}
+  .img_articulos_bg {
+     background-size: 145% !important;
+    height: 268px;
+}
+  .video33 {
+    width: 100%;
+    height: 268px;
+}
 .image-book {
     width: 261px;
     left: 0%;
@@ -3040,6 +3070,13 @@ input[type=email], textarea.materialize-textarea {
 }
 
 @media only screen and (max-width: 992px) and (min-width: 768px){
+    .sombrita{
+  height: auto;
+}
+  .video33 {
+    width: 100%;
+    height: 290px;
+}
 .image-book {
     width: 261px;
     left: 15%;
@@ -3053,6 +3090,13 @@ input[type=email], textarea.materialize-textarea {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 600px){
+    .sombrita{
+  height: auto;
+}
+.video33 {
+    width: 100%;
+    height: 265px;
+}
 .image-book {
     width: 261px;
     left: 0%;
