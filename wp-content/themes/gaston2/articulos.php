@@ -45,59 +45,6 @@ get_header();
       </div>
     </div>
     <div class="col l12 m12 s12 margin-30">
-<!-- <?php
-  $args = array( 'numberposts' => '3' );
-  $recent_posts = wp_get_recent_posts( $args );
-  foreach( $recent_posts as $recent ){?> -->
-<!-- contenido -->
-    <!-- <div class="col l4 m6 s12" style="margin-bottom:20px;">
-      <div class="col l12 m12 s12 size relative nopadding">
-        <a href="<?php the_permalink(); ?>"></a>
-        <div class="imggastonblog">
-      <?php $video = get_post_meta($recent["ID"], 'video1', true); //video1 es un campo personalizado, con custom fields
-       if (!empty($video)){                
-           echo "<iframe class='video33' height='500' src='https://www.youtube.com/embed/".$video."' frameborder='0' allowfullscreen></iframe>";
-          }elseif (!empty(has_post_thumbnail($recent["ID"]))){
-                     $url = wp_get_attachment_url( get_post_thumbnail_id($recent["ID"]) );
-                    echo '<li class="img_articulos_bg" style="background: url('. $url.')">'; 
-                  }
-        else{
-            echo "no hay imagen o video disponible";
-          }
-           ?>     
-        </div>
-        <div class="col s12 m12 l12 nopadding nomargin">
-          <div class="col l5 m8 s5 text-titulo nopadding">
-            <?php  //echo $recent["post_name"]; ?> 
-            <?php echo the_category() ;
-              single_cat_title('Artículos en la categoría: ',true);
-              echo get_the_category();
-              echo $recent["category"];
-            ?>
-            <?php //print_r($recent) ?>
-          </div>
-          <div class="col l7 m4 s7 text-fecha nopadding">
-            <?php echo get_the_date( get_option('date_format') ); ?>
-          </div>
-        </div>          
-          <div class="col l12 m12 s12 text-contenido">
-            <?php  echo $recent["post_title"]; ?>  
-          </div>
-          <div class="col l12 m12 s8 offset-s2 text-boton margin-30">
-            <div class="col 12 m12 s8 titulo_articulos_home">
-              <a href="<?php the_permalink($recent["ID"]); ?>">Leer más <i class="material-icons">arrow_forward</i></a>
-            </div>
-          </div>
-        </div>      
-    </div>     -->
-<!-- conetinido -->
-     <!-- <?php
-     //var_dump($url);
-  }
-  wp_reset_query();
-?> -->
-
-
 <?php query_posts('showposts=3'); /* Con esta línea limitamos el resultado a 5 resultados */ ?>
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
     <!-- contenido -->
@@ -240,9 +187,11 @@ wp_reset_query();
                                //echo '<img class="fondo-pagevideo2" src="'. $url.'">'; 
                                echo '<li class="img_articulos_bg" style="background: url('. $url.')">'; 
                               }
-                    else{
-                        echo "no hay imagen o video disponible";
-                      }
+                    else{?>
+                        <div class="col s12 m12 l12 center-align sombrita">
+              <p class='no-hay'>no hay imagen o video disponible</p>
+            </div>
+                     <?php }
                        ?>  
                 </div></a>
                 <div class="col l5 m7 s5 text-titulo ">
