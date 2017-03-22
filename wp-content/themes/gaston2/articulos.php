@@ -152,7 +152,7 @@ endwhile; endif;
 wp_reset_query();
 ?>
 </div><!-- fin mas leidas-->
-<div class="row nopadding">
+<!-- <div class="row nopadding">
   <div class="col s12 m12 l10 offset-l1 margin-30 nopadding">
     <div class="col s3 m4 l4 div-tam center-align nopadding">
       <div class="linea"></div>
@@ -164,17 +164,17 @@ wp_reset_query();
       <div class="linea"></div>
     </div>
   </div>
-</div>
-<div class="col s12 m12 l12 masarticuls">
-  <!-- <div class="slidermasarticulos "> -->
+</div> -->
+<!-- <div class="col s12 m12 l12 masarticuls">
+  <div class="slidermasarticulos ">
     <div class="col s12 m12 l12"> 
       <?php
       global $post;
-     // $rand =mt_rand(11,12);
+     $rand =mt_rand(11,12);
       $args = array("posts_per_page" => 3, "offset"=> 0, "category" =>  19 ); //categoria videos
       $myposts = get_posts( $args );
       foreach( $myposts as $post ) : setup_postdata($post); ?>
-      <!-- <div class="slide">     -->
+      <div class="slide">    
         <div class="col l4 m4 s12" style="margin-bottom:20px;">      
           <div class="col l12 m12 s12 size relative fondo-blanco">
             <a href="<?php the_permalink(); ?>">
@@ -184,7 +184,7 @@ wp_reset_query();
                        echo "<iframe class='video33' height='554' src='https://www.youtube.com/embed/".$video."' frameborder='0' allowfullscreen></iframe>";
                       }elseif (!empty(has_post_thumbnail())){
                                 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );                    
-                               //echo '<img class="fondo-pagevideo2" src="'. $url.'">'; 
+                               echo '<img class="fondo-pagevideo2" src="'. $url.'">'; 
                                echo '<li class="img_articulos_bg" style="background: url('. $url.')">'; 
                               }
                     else{?>
@@ -210,11 +210,11 @@ wp_reset_query();
                 </div>
               </div>
             </div> 
-          <!-- </div> -->
+          </div>
         <?php endforeach; ?> 
       </div>
-   <!--  </div> -->
-  </div>
+    </div>
+  </div> -->
 </div>
 
 <?php
