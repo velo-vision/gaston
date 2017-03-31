@@ -192,7 +192,9 @@ wp_reset_query();
               <p class='no-hay'>no hay imagen o video disponible</p>
             </div>
                      <?php }
+
                        ?>
+
                 </div></a>
                 <div class="col l5 m7 s5 text-titulo ">
                   <?php echo the_category() ?>
