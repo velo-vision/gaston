@@ -47,7 +47,7 @@ add_filter('user_contactmethods','my_new_contactmethods',10,1);
 //reducir conteido para mostrar expert o content
 
  function wpdocs_custom_excerpt_length( $length ) {
-     return 50;
+     return 25;
  }
  add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 

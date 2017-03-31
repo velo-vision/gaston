@@ -57,7 +57,7 @@
         <ul class="side-nav" id="mobile-demo">
           <li><a href="<?php echo site_url("?page_id=125");?>">Lifestyle</a></li>
           <li><a href="<?php echo site_url("?page_id=130");?>">Articulos</a></li>
-          <li <?php if(is_category("19")) echo 'class="active"'; ?>><a href="<?php echo get_category_link(19); ?>">Videos</a></li>          
+          <!-- <li <?php if(is_category("19")) echo 'class="active"'; ?>><a href="<?php echo get_category_link(19); ?>">Videos</a></li>     -->      
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
