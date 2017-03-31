@@ -63,5 +63,5 @@ get_header(); ?>
         </div>
     <?php endif; ?>
 </div>
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
 
