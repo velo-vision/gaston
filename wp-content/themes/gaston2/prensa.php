@@ -26,27 +26,21 @@ Template Name: prensa
 					echo '<li class="img_articulos_bg" style="background: url('. $url.')">';
 				}?>
 			</div></a>
-			<div class="col s12 m6 l6">
-				<div class="col s12 m12 l12">
+			<div class="col s12 m6 l6 nopadding">
+				<div class="col s12 m12 l12 nopadding">
 					<div class="col s12 m12  l12 historial-title">
-						<p>
-							<?php the_title(); ?>
-						</p>
+						<p><?php the_title(); ?></p>
 					</div>
-					<div class="col l6 m6 s6 text-subtitle">
-						<p>
-							<?php echo the_category() ?>
-						</p>
-					</div>
-					<div class="col l6 m6 s6 text-subtitle center nopadding">
-						<p>
-							<?php echo get_the_date( get_option('date_format') ); ?>
-						</p>
-					</div>
+					<div class="col s12 m12 l12 nopadding">
+						<div class="col l6 m6 s6 text-subtitle">
+							<p><?php echo the_category() ?></p>
+						</div>
+						<div class="col l6 m6 s6 text-subtitle">
+							<p><?php echo get_the_date( get_option('date_format') ); ?></p>
+						</div>
+					</div>					
 					<div class="col l12 m12 s12 text-historial">
-						<p>
-							<?php echo get_the_excerpt( get_the_ID() ) ?>
-						</p>
+						<p><?php echo get_the_excerpt( get_the_ID() ) ?></p>
 					</div>
 					<div class="col l6 m6 s12 text-compartir">
 						<span class='st_facebook_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>

@@ -915,10 +915,11 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 }
 
 .historial-title{
-  font-size: 32px;
+  font-size: 25px;
   font-family: 'Muli', sans-serif;
   font-weight:bold;
   margin-top: 5px;
+  text-transform: capitalize;
 }
 
 .text-subtitle{
@@ -928,7 +929,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 }
 
 .text-historial{
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Lato', sans-serif;
   font-weight:300;
 }
@@ -1761,7 +1762,7 @@ input[type=email], textarea.materialize-textarea {
 
 }
 
-@media only screen and (max-width: 700px) and (min-width: 600px){
+/*@media only screen and (max-width: 700px) and (min-width: 600px){
   .bg-articulos10 {
     height: 250px;
   }
@@ -1789,14 +1790,48 @@ input[type=email], textarea.materialize-textarea {
     font-size: 18px;
   }
 
-}
+}*/
 
 @media only screen and (max-width: 750px) and (min-width: 600px){
   .historial-title {
-    font-size: 26px;
+    font-size: 18px;
     font-family: 'Muli', sans-serif;
     font-weight: bold;
   }
+
+  .text-subtitle {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+  }
+
+ .bg-articulos10 {
+    height: 250px;
+  }
+  .bg-articulos4 {
+    height: 250px;
+  }
+
+  .bg-articulos9 {
+    height: 250px;
+  }
+
+  .bg-articulos8 {
+    height: 250px;
+  }
+
+  .text-boton span {
+    font-size: 18px;
+  }
+
+  .margin-flecha {
+    margin-top: 5px;
+  }
+
+  .text-boton i {
+    font-size: 18px;
+  }
+
 }
 
 @media only screen and (max-width: 600px) and (min-width: 200px){
@@ -2336,7 +2371,7 @@ input[type=email], textarea.materialize-textarea {
     background-attachment: scroll !important;
   }
   .historial-title {
-    font-size: 32px;
+    font-size: 18px;
     font-family: 'Muli', sans-serif;
     font-weight: bold;
     margin-top: 12px;
@@ -2901,6 +2936,8 @@ input[type=email], textarea.materialize-textarea {
     width: 55px !important;
     top: -4% !important;
   }
+
+
 }
 
 @media only screen and (max-width:1440px) and (min-width: 768px){
@@ -3143,3 +3180,16 @@ input[type=email], textarea.materialize-textarea {
     font-weight: 900;
 }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 992px){
+  .historial-title {
+    font-size: 18px;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+}
+
+
+/**************/

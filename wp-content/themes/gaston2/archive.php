@@ -19,23 +19,25 @@ get_header(); ?>
                         }
                     } ?>
                 </div></a>
-                <div class="col s12 m6 l6">
-                    <div class="col s12 m12 l12">
+                <div class="col s12 m6 l6 nopadding">
+                    <div class="col s12 m12 l12 nopadding">
                         <div class="col s12 m12 l12 historial-title">
                             <p class="titulo-categorias" id="post-<?php the_ID(); ?>">
                                 <a class="a" href="<?php the_permalink() ?>" ><?php the_title(); ?></a>
                             </p>
                         </div>
-                        <div class="col l6 m6 s6 text-subtitle">
-                            <p>
-                                <?php echo the_category() ?>
-                            </p>
-                        </div>
-                        <div class="col l6 m6 s6 text-subtitle center nopadding">
-                            <p>
-                                <?php echo get_the_date( get_option('date_format') ); ?>
-                            </p>
-                        </div>
+                        <div class="col s12 m12 l12 nopadding">
+                            <div class="col l6 m6 s6 text-subtitle">
+                                <p>
+                                    <?php echo the_category() ?>
+                                </p>
+                            </div>
+                            <div class="col l6 m6 s6 text-subtitle center nopadding">
+                                <p>
+                                    <?php echo get_the_date( get_option('date_format') ); ?>
+                                </p>
+                            </div>
+                        </div>                        
                         <div class="col l12 m12 s12 text-historial">
                             <p>
                                 <?php echo get_the_excerpt( get_the_ID() ) ?>
@@ -61,5 +63,5 @@ get_header(); ?>
         </div>
     <?php endif; ?>
 </div>
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
 
