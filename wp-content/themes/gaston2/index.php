@@ -14,7 +14,7 @@
        <?php echo do_shortcode('[text-blocks id="52"]'); ?>
     </div>
     <!--Est video -->
-<div class="col l8 m12 s12 center video-arriba">          
+<div class="col l8 m12 s12 center video-arriba">
    <?php $videos2 = get_field("video", 245); ?>
      <div class="col s12 m12 l12 remove-control galeria-vid nopadding">
         <ul class="bxsliderr">
@@ -25,27 +25,27 @@
         </ul>
      </div>
       <div class="col s12 m12 l12 control-vid tumbs-galeria-vid hide-on-small-only">
-      <?php $videos2 = get_field("video", 245);  ?>        
+      <?php $videos2 = get_field("video", 245);  ?>
         <div id="bx-pagerr">
-          <ul id="slider4">               
+          <ul id="slider4">
         <?php
-        $count =0; 
+        $count =0;
         foreach ($videos2 as $key => $value){ ?>
         <li>
-          <?php echo "<a data-slide-index=".$count." href=''><img src='https://img.youtube.com/vi/".$value['url_video']."/default.jpg' class='imagen-video-small'/></a>"; ?>            
+          <?php echo "<a data-slide-index=".$count." href=''><img src='https://img.youtube.com/vi/".$value['url_video']."/default.jpg' class='imagen-video-small'/></a>"; ?>
         </li>
-    <?php 
-        $count++; 
-        } 
+    <?php
+        $count++;
+        }
         print_r($count);
         ?>
-          </ul>          
+          </ul>
         </div>
       </div>
     </div>
     <!--fin -->
   </div>
-  
+
   <!--slider articulos-->
   <div class="col l12 m12 s12 destacados">
     <p class="nomargin">ARTÍCUL<span style="border-bottom: 4px solid #000; padding-bottom:8px;">OS DE</span>STACADOS</p>
@@ -64,7 +64,7 @@
            <p class='contenido-slider-normal'>".$value->post_content."</p>
         </div>
      </li>";
-    } ?>   
+    } ?>
     </ul>
   </div>
   <!--Articulos-->
@@ -79,9 +79,9 @@
 	  <a href="<?php the_permalink($post->ID); ?>">
 	  		<div class="imggastonblog">
           <div class="col l5 m5 s5 img_articulos_homepage nopadding">
-	  			<?php 
+	  			<?php
             if (has_post_thumbnail()) {
-              $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );                    
+              $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
               //echo "<img src='". $url."' class='img_articulos_bg' />";
               echo '<li class="img_articulos_bg" style="background: url('. $url.')">';
            }?>
@@ -93,7 +93,7 @@
 	  				<?php echo get_the_date( get_option('date_format') ); ?>
 	  			</div>
 	  			<div class="col l12 m12 s12 text-contenido">
-	  				<?php the_title(); ?>     
+	  				<?php the_title(); ?>
 	  			</div></a>
 	  			<div class="col l12 m12 s8 offset-s2 text-boton margin-30">
 	  				<div class="col 12 m12 s8 titulo_articulos_home">
@@ -108,55 +108,55 @@
 <!--est-->
   <div class="row fondo-libros-gaston">
       <div class="col s12 m12 l10 offset-l1 nopadding" style="margin-top:6%; ">
-       <?php 
+       <?php
         $args = array( 'category' => '7',);
-        $posts_array = get_posts( $args ); 
+        $posts_array = get_posts( $args );
 
       ?>
         <div class="col s12 m10 l8 remove-control nopadding galeria-libro">
-          <ul class="bxslider">       
+          <ul class="bxslider">
           <?php foreach ($posts_array as $key => $value) {
         $src = wp_get_attachment_image_src( get_post_thumbnail_id($value->ID), 'full' );
                   $url= $src[0]; ?>
            <li>
             <div class="col s12 m12 l12">
-                  <div class="col s12 m6 l5">              
+                  <div class="col s12 m6 l5">
                     <img src="<?php echo $url ?>" class="image-book">
                   </div>
                   <div class="col s12 m6 l7 fondolibros" style='position: relative;'>
                     <p class="description-book">LIBRO RECOMENDADO DEL MES<br><span><?php echo $value->post_title; ?></span></p>
 
                     <?php $textoLargo= get_the_excerpt();
-                      $textoCorto=limitar_palabras($textoLargo, 50,'&#91;...&#93;&nbsp;&nbsp;'); ?>           
-                    <p class="content-book"><?php echo $textoCorto ?></p>                  
+                      $textoCorto=limitar_palabras($textoLargo, 50,'&#91;...&#93;&nbsp;&nbsp;'); ?>
+                    <p class="content-book"><?php echo $textoCorto ?></p>
                   </div>
               </div>
-          </li>           
+          </li>
           <?php } ?>
           </ul>
         </div>
         <div class="col m2 l2 offset-l1 center-align hide-on-small-only caratural-book">
-        <?php 
+        <?php
         $args = array( 'category' => '7',);
         $posts_array = get_posts( $args ); ?>
           <div id="bx-pager">
             <ul id="slider2">
-            <?php 
+            <?php
               $cont =0;
             foreach ($posts_array as $key => $value){
              $src = wp_get_attachment_image_src( get_post_thumbnail_id($value->ID), 'full' );
                   $url= $src[0]; ?>
           <li><a data-slide-index="<?php echo $cont; ?>" href=""><img src="<?php echo $url ?>" class="tubms" /></a></li>
-               <?php 
-                $cont ++;               
+               <?php
+                $cont ++;
                } ?>
             </ul>
           </div>
         </div>
-      </div>  
-      </div>   
+      </div>
+      </div>
       <!--fin est-->
-      
+
     </div>
 	</div>
   <div class="col l12 m12 s12" style="padding:0px;">
@@ -164,8 +164,8 @@
     <div class="col l12 m12 s12 margin-100">
       <div class="col l12 m12 s12 relative">
         <img src="<?php bloginfo('template_url'); ?>/images/ultimas1.png" alt="Gaston Lombardi" width="100%;">
-      </div>      
-    </div> 
+      </div>
+    </div>
   </div>
 
 <div class="row">
@@ -179,9 +179,9 @@
     <a href="<?php the_permalink($post->ID); ?>">
         <div class="imggastonblog">
           <div class="col l5 m5 s5 img_articulos_homepage nopadding">
-          <?php 
+          <?php
             if (has_post_thumbnail()) {
-              $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );                    
+              $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
               //echo "<img src='". $url."' class='img_articulos_bg' />";
               echo '<li class="img_articulos_bg" style="background: url('. $url.')">';
            }?>
@@ -193,7 +193,7 @@
             <?php echo get_the_date( get_option('date_format') ); ?>
           </div>
           <div class="col l12 m12 s12 text-contenido">
-            <?php the_title(); ?>     
+            <?php the_title(); ?>
           </div>
           <div class="col l12 m12 s8 offset-s2 text-boton margin-30">
             <div class="col 12 m12 s8 titulo_articulos_home">

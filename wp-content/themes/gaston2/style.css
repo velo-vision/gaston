@@ -1,4 +1,4 @@
-/*  
+/*
 Theme Name: Gaston2
 Theme URI: http://velosoft.mx/
 Author: Esteban Gárcia
@@ -16,7 +16,7 @@ textarea {
     background-color: #fff;
 }
 input{
-  background: #000; 
+  background: #000;
   border: none;
 }
 .entry_author_image img{
@@ -31,7 +31,7 @@ input{
 /**search*/
 .campo{
   background-color: transparent;
-  border: 1px solid #c9beb6 ;  
+  border: 1px solid #c9beb6 ;
   box-sizing: content-box;
   box-shadow: none;
   font-family: 'Muli', sans-serif;
@@ -164,7 +164,7 @@ input{
   font-size: 32px;
   color: #000;
   font-family:'Muli', sans-serif;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   font-weight: 600;
 }
 .a{
@@ -194,8 +194,8 @@ div.wp_rp_content {
   padding: 0;
 }
 
-.autores-slider .bx-viewport {    
-  height: 154px !important; 
+.autores-slider .bx-viewport {
+  height: 154px !important;
 }
 
 .autores-slider .bx-wrapper .bx-next {
@@ -275,7 +275,7 @@ ul.post-categories a {
 
 .img_articulos_homepage {
   width: 100% !important;
-  height: 440px;
+  height: 376px;
 }
 
 .interna_bg {
@@ -299,7 +299,7 @@ ul.post-categories a {
 }
 
 
-/** VIDEO **/ 
+/** VIDEO **/
 
 .gastonvideo {
   margin-top: -100px;
@@ -420,7 +420,7 @@ ul.post-categories a {
   letter-spacing: 6px;
 }
 
-.contenido-slider-normal{  
+.contenido-slider-normal{
   font-family: 'Lato', sans-serif;
   color: #fff;
   font-size: 18px;
@@ -1437,6 +1437,9 @@ input[type=email], textarea.materialize-textarea {
 }
 /*fin footer*/
 @media only screen and (max-width: 1200px) and (min-width: 992px){
+  .img_articulos_homepage {
+    height: 262px !important;
+}
   .description-book span {
     font-size: 28px;
     font-weight: 900;
@@ -1469,7 +1472,7 @@ input[type=email], textarea.materialize-textarea {
   }
 
   .text-contenido {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -1815,8 +1818,8 @@ input[type=email], textarea.materialize-textarea {
     height: 195px;
 }
 
-  .fondo-pagevideo2 {  
-    height: 130px !important 
+  .fondo-pagevideo2 {
+    height: 130px !important
 }
 
   .titulo-busqueda{
@@ -2132,7 +2135,7 @@ input[type=email], textarea.materialize-textarea {
   .text-fecha {
     margin-top: 13px;
   }
-  .text-boton a { 
+  .text-boton a {
     font-size: 13px !important;
 
   }
@@ -2921,17 +2924,17 @@ input[type=email], textarea.materialize-textarea {
     height: 500px !important;
   }
   .contenido-slider-normal {
-    font-family: 'Lato', sans-serif;
-    color: #fff;
-    font-size: 18px;
-    position: absolute;
-    z-index: 2;
-    top: 30%;
-    width: 77%;
-    left: 9%;
-    letter-spacing: 2px;
-    line-height: 38px;
-    font-weight: 200;
+      font-family: 'Lato', sans-serif;
+      color: #fff;
+      font-size: 14px;
+      position: absolute;
+      z-index: 2;
+      top: 26%;
+      width: 77%;
+      left: 9%;
+      letter-spacing: 2px;
+      line-height: 38px;
+      font-weight: 200;
   }
   .titulo-slider-normal {
     z-index: 2;
@@ -2940,7 +2943,7 @@ input[type=email], textarea.materialize-textarea {
     color: #fff;
     font-weight: 500;
     position: absolute;
-    top: 42%;
+    top: 14%;
     left: 27%;
     text-transform: uppercase;
     width: 600px;
@@ -3070,6 +3073,15 @@ input[type=email], textarea.materialize-textarea {
 }
 
 @media only screen and (max-width: 992px) and (min-width: 768px){
+  .text-boton a {
+    font-size: 14px;
+}
+  .text-fecha {
+     margin-top: 0px;
+}
+  .text-titulo {
+    margin-top: 0px !important;
+}
     .sombrita{
   height: auto;
 }
@@ -3090,6 +3102,29 @@ input[type=email], textarea.materialize-textarea {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 600px){
+  .borde-articulos {
+    margin-top: 6px;
+    font-size: 26px;
+}
+  .text-boton a {
+    font-size: 12px;
+}
+  .text-fecha {
+    margin-top: 0px;
+}
+  .img_articulos_bg {
+    height: 207px;
+}
+  .img_articulos_homepage {
+    height: 200px !important;
+}
+  .titulo-slider-normal {
+    top: 26%;
+    left: 0%;
+}
+  .destacados {
+    margin-top: 40px !important;
+}
     .sombrita{
   height: auto;
 }
