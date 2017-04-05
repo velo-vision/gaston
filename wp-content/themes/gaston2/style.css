@@ -113,7 +113,7 @@ input{
 }
 .video33{
     width: 100%;
-    height: 390px;
+    height: 320px;
 }
 .no-hay{
   font-family: "Roboto", sans-serif;
@@ -290,10 +290,10 @@ ul.post-categories a {
 
 
 .img_articulos_bg {
-  background-size: 170% !important;
+  background-size: 100% !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  height: 390px;
+  height: 320px;
   list-style: none;
   background-attachment: scroll !important;
 }
@@ -590,12 +590,12 @@ ul.post-categories a {
 }
 .titulo-ultimo{
    font-family: 'Lato', sans-serif;
-   font-size: 40px;
+   font-size: 35px;
    font-weight: bold;
    color:#000;
    text-align: center;
    text-transform: uppercase;
-   padding: 0 16%;
+   padding: 0 10%;
 }
 
 .titulo-ultimo span{
@@ -606,12 +606,13 @@ ul.post-categories a {
 
 .ultimo-titulo{
   font-family: 'Lato', sans-serif;
-  font-size: 40px;
-  font-weight: 800;
+  font-size: 27px;
+  font-weight: 700;
   color: #000;
+  text-transform: uppercase;
 }
 .ultimas-notas{
-  margin: 27% auto;
+  margin: 40% auto;
 }
 .fecha-titulo-ultima{
   font-family: 'Lato', sans-serif;
@@ -1553,14 +1554,14 @@ input[type=email], textarea.materialize-textarea {
     padding:0px;
   }
 
-  .img_articulos_bg {
+  /*.img_articulos_bg {
     background-size: 150% !important;
     background-position: 55% 80% !important;
     background-repeat: no-repeat !important;
     height: 255px;
     list-style: none;
     background-attachment: scroll !important;
-  }
+  }*/
   /**video slider*/
 
   /**autores slider*/
@@ -1906,29 +1907,7 @@ input[type=email], textarea.materialize-textarea {
 }
 
 @media only screen and (max-width: 600px) and (min-width: 200px){
-
-/*ultimas*/  
-.div-follow {
-  position: initial;
-  z-index: 2;
-  left: 0% !important;
-  top: 51%;
-  background: transparent;
-}
-.imagen-lineaentradas {
-  display: none;
-}
-.ultimas-notas {
-  margin: 140% 0 0 0;
-}
-.titulo-ultimo {  
-  font-size: 17px;    
-  padding: 0 3%;
-  background: #fff;
-  opacity: .8;
-}
-/*fin ultimas*/
-     .sombrita{
+  .sombrita{
   height: auto;
 }
     .video33 {
@@ -1991,8 +1970,8 @@ input[type=email], textarea.materialize-textarea {
   }
   /**mas articulos**/
   .img_articulos_bg {
-    background-size: 150% !important;
-    background-position: 55% 80% !important;
+    background-size: 100% !important;
+    background-position: 50% 50% !important;
     background-repeat: no-repeat !important;
     height: 275px;
     list-style: none;
@@ -2159,12 +2138,10 @@ input[type=email], textarea.materialize-textarea {
     height: 250px !important;
   }
   .image-book {
-    width: 113px;
-    height: auto;
-    z-index: 2;
-    position: absolute;
-    left: 26%;
-    top: 74%;
+    width: 200px;
+    height: 300px;
+    left: 22%;
+    top: 40%;
   }
 
   .galeria-vid .bx-wrapper{
@@ -2456,7 +2433,7 @@ input[type=email], textarea.materialize-textarea {
     padding:0px !important;
   }
   .img_articulos_bg {
-    background-size: 170% !important;
+    background-size: 140% !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     height: 275px;
@@ -3242,9 +3219,9 @@ input[type=email], textarea.materialize-textarea {
   .text-fecha {
     margin-top: 0px;
 }
-  .img_articulos_bg {
+  /*.img_articulos_bg {
     height: 207px;
-}
+}*/
   .img_articulos_homepage {
     height: 200px !important;
 }
@@ -3262,18 +3239,55 @@ input[type=email], textarea.materialize-textarea {
     width: 100%;
     height: 265px;
 }
-.image-book {
-    width: 261px;
-    left: 0%;
-    height: 347px;
-    top: 27%;
-}
+
 .description-book span {
     font-size: 16px;
     font-weight: 900;
 }
 }
 
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+
+/*ultimas*/  
+.div-follow {
+  position: initial;
+  z-index: 2;
+  left: 0% !important;
+  top: 51%;
+  background: transparent;
+  height: 350px;
+}
+.imagen-lineaentradas {
+  display: none;
+}
+.ultimas-notas {
+  margin: 140% 0 0 0;
+}
+.titulo-ultimo {  
+  font-size: 17px;    
+  padding: 0 3%;
+  background: #fff;
+  opacity: .8;
+}
+.articuloprincipalLugar {
+  background-size: 150% !important;
+  height: 230px;
+}
+.ultimas-notas {
+  margin: 250px 0 0 0;
+  padding: 0px !important;
+}
+.fecha-titulo-ultima {
+  font-size: 16px;
+
+}
+.ultimo-titulo {
+  font-size: 19px;
+  padding: 0px !important;
+}
+
+/*fin ultimas*/
+}
 @media only screen and (min-width: 600px) and (max-width: 992px){
   .historial-title {
     font-size: 18px;
@@ -3282,7 +3296,69 @@ input[type=email], textarea.materialize-textarea {
     margin-top: 5px;
     text-transform: capitalize;
 }
+/*ultimas entradas*/
+.titulo-ultimo {   
+  font-size: 21px;
+  padding: 0 6%;
+  background: #fff;
+  opacity: .7;
 }
 
+.articuloprincipalLugar {
+  height: 238px;
+}
+
+.div-follow {
+  height: 244px;
+}
+.fecha-titulo-ultima {
+  font-size: 16px;
+}
+.ultimo-titulo {
+  font-size: 18px;
+}
+.imagen-lineaentradas {
+  width: 60px !important;
+}
+/**/
+/*seccion libros*/
+.image-book {
+  width: 261px;
+  left: 9%;
+  height: 347px;
+  top: 27%;
+}
+/*articulos destacados*/
+.img_articulos_bg {
+  background-size: 170% !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+  height: 208px;
+  list-style: none;
+  background-attachment: scroll !important;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+.titulo-ultimo {
+  font-size: 23px;
+  padding: 0 9%;
+}
+.articuloprincipalLugar {
+  height: 290px;
+}
+.fecha-titulo-ultima {
+  font-size: 16px;
+}
+.ultimo-titulo {
+  font-size: 18px;
+}
+.div-follow {
+  height: 273px;
+}
+.imagen-lineaentradas {
+  width: 66px !important;
+}
+
+}
 
 /**************/

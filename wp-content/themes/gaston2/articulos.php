@@ -48,7 +48,7 @@ get_header();
 <?php query_posts('showposts=3'); /* Con esta línea limitamos el resultado a 5 resultados */ ?>
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
     <!-- contenido -->
-    <div class="col l4 m6 s12" style="margin-bottom:20px; margin-top:15px;">
+    <div class="col l4 m4 s12" style="margin-bottom:20px; margin-top:15px;">
       <div class="col l12 m12 s12 size relative nopadding">
         <a href="<?php the_permalink(); ?>"></a>
         <div class="imggastonblog">
@@ -107,7 +107,7 @@ get_header();
 query_posts('posts_per_page=3&meta_key=post_views_count&orderby=meta_value_num&order=DESC');
 if (have_posts()) : while (have_posts()) : the_post();
 ?>
-    <div class="col l4 m6 s12" style="margin-bottom:20px; margin-top:15px;">
+    <div class="col l4 m4 s12" style="margin-bottom:20px; margin-top:15px;">
       <div class="col l12 m12 s12 size relative nopadding">
         <a href="<?php the_permalink(); ?>"></a>
         <div class="imggastonblog">

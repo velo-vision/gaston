@@ -167,22 +167,22 @@
   </div>
 
 <div class="row">
-  <div class="col s12 m12 l9 offset-l1">
+  <div class="col s12 m9 offset-m1 l9 offset-l1">
     <fieldset>
           <legend class="titulo-ultimo">últimas <span>entr</span>adas</legend>
           <?php global $post;
                 $args = array( "posts_per_page" => 1, "offset"=> 0, "category" => 12 );
                 $myposts = get_posts( $args );
                 foreach( $myposts as $post ) : setup_postdata($post); ?>
-              <div class="col s12 m12 l6 offset-l1 div-fijo">
+              <div class="col s12 m7 l6 offset-l1 div-fijo">
                 <?php if (has_post_thumbnail()) { $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
                   //echo "<img src='". $url."' class='articuloprincipalLuga' />";
                   echo '<li class="articuloprincipalLugar" style="background: url('. $url.')">';
                     }?>
                   <img src="<?php bloginfo('template_url') ?>/images/ultimas-lineas.png" class="imagen-lineaentradas">
-                  <div class="col s12 m12 l8 div-follow">
+                  <div class="col s12 m10 l8 div-follow">
                     <div class="col s12 m12 l12 center-align ultimas-notas">
-                      <div class="col s12 m6 l12 fecha-titulo-ultima">
+                      <div class="col s12 m12 l12 fecha-titulo-ultima">
                         <p>Life Style//<?php echo get_the_date( get_option('date_format') ); ?></p>
                       </div>
                       <div class="s12 m12 l12 ultimo-titulo">
