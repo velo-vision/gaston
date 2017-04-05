@@ -561,6 +561,76 @@ ul.post-categories a {
 
 
 /**/
+
+/*lugares*/
+.articuloprincipalLugar{
+  background-size: 160% !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  height: 500px;
+  list-style: none;
+  background-attachment: scroll !important;
+}
+
+.div-fijo{
+  position: relative;
+  z-index: 1;
+  margin: 6% 0;
+}
+.div-fijo img{
+  width: 100%;
+}
+.div-follow{
+  position: absolute;
+  z-index: 2;
+  left: 63% !important;
+  top: 45%;
+  background: #ededed;
+  height: 500px;
+}
+.titulo-ultimo{
+   font-family: 'Lato', sans-serif;
+   font-size: 40px;
+   font-weight: bold;
+   color:#000;
+   text-align: center;
+   text-transform: uppercase;
+   padding: 0 16%;
+}
+
+.titulo-ultimo span{
+  border-bottom: solid 4px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.ultimo-titulo{
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #000;
+}
+.ultimas-notas{
+  margin: 27% auto;
+}
+.fecha-titulo-ultima{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  text-transform: capitalize;
+
+}
+.imagen-lineaentradas{
+  position: relative;
+  width: 115px !important;
+  left: 57%;
+  top: 37%;
+  z-index: 3;
+}
+.separacion-ultimas{
+  margin: 10% 0;
+}
+/*fin*/
 /*****/
 .nomargin{
   margin:0px;
@@ -575,6 +645,7 @@ ul.post-categories a {
 }
 .absolute{
   position: absolute;
+  z-index: -1;
 }
 
 .margin-flecha{
@@ -1835,6 +1906,28 @@ input[type=email], textarea.materialize-textarea {
 }
 
 @media only screen and (max-width: 600px) and (min-width: 200px){
+
+/*ultimas*/  
+.div-follow {
+  position: initial;
+  z-index: 2;
+  left: 0% !important;
+  top: 51%;
+  background: transparent;
+}
+.imagen-lineaentradas {
+  display: none;
+}
+.ultimas-notas {
+  margin: 140% 0 0 0;
+}
+.titulo-ultimo {  
+  font-size: 17px;    
+  padding: 0 3%;
+  background: #fff;
+  opacity: .8;
+}
+/*fin ultimas*/
      .sombrita{
   height: auto;
 }

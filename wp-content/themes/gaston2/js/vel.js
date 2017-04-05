@@ -63,10 +63,11 @@ $(document).ready(function(){
 	$('.bxslider3').bxSlider();
 	auto: true
 });*/
+//slider articulos destacados
 $('#slider3').bxSlider({
   auto: true,
   autoControls: true,
-  pause: 3000
+  pause: 15000
 })
 
 
