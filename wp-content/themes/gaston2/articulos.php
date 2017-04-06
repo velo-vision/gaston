@@ -57,7 +57,7 @@ get_header();
            echo "<iframe class='video33' height='500' src='https://www.youtube.com/embed/".$video."' frameborder='0' allowfullscreen></iframe>";
           }elseif (!empty(has_post_thumbnail())){
                      $url = wp_get_attachment_url( get_post_thumbnail_id() );
-                    echo '<li class="img_articulos_bg" style="background: url('. $url.')">';
+                    echo '<li class="img_articulos_bg articulos-internos" style="background: url('. $url.')">';
                   }
         else{?>
             <div class="col s12 m12 l12 center-align sombrita">
@@ -114,7 +114,7 @@ if (have_posts()) : while (have_posts()) : the_post();
           <!-- <?php
           if (has_post_thumbnail()) {
             $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-            echo '<li class="img_articulos_bg" style="background: url('. $url.')">';}?>    -->
+            echo '<li class="img_articulos_bg articulos-internos" style="background: url('. $url.')">';}?>    -->
 
         <?php $video = get_post_meta($post->ID, 'video1', true); //video1 es un campo personalizado, con custom fields
        if (!empty($video)){
@@ -122,7 +122,7 @@ if (have_posts()) : while (have_posts()) : the_post();
           }elseif (!empty(has_post_thumbnail())){
                     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
                    //echo '<img class="fondo-pagevideo2" src="'. $url.'">';
-                   echo '<li class="img_articulos_bg" style="background: url('. $url.')">';
+                   echo '<li class="img_articulos_bg articulos-internos" style="background: url('. $url.')">';
                   }
         else{
             echo "no hay imagen o video disponible";
@@ -187,7 +187,7 @@ wp_reset_query();
                                echo '<img class="fondo-pagevideo2" src="'. $url.'">';
                                echo '<li class="img_articulos_bg" style="background: url('. $url.')">';
                               }
-                    else{?>
+                    else{ ?>
                         <div class="col s12 m12 l12 center-align sombrita">
               <p class='no-hay'>no hay imagen o video disponible</p>
             </div>

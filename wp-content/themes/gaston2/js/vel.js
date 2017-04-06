@@ -43,20 +43,20 @@ $(document).ready(function(){
 });
 
 // galeria video
- $(document).ready(function(){
-    $('.bxsliderr').bxSlider({    
-      pagerCustom: '#bx-pagerr'
-    });
-    $('#slider4').bxSlider({
-      slideWidth: 200,
-      minSlides: 1,
-      maxSlides: 4,
-      auto: true,
-      autoControls: false,
-      pause: 3000,
-      slideMargin: 20
-    });
-  });
+ // $(document).ready(function(){
+ //    $('.bxsliderr').bxSlider({    
+ //      pagerCustom: '#bx-pagerr'
+ //    });
+ //    $('#slider4').bxSlider({
+ //      slideWidth: 200,
+ //      minSlides: 1,
+ //      maxSlides: 4,
+ //      auto: true,
+ //      autoControls: false,
+ //      pause: 3000,
+ //      slideMargin: 20
+ //    });
+ //  });
 
 // slider normal
 /*$(document).ready(function(){

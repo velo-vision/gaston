@@ -9,6 +9,12 @@ Template: Gaston2
 @import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900');
+/*a*/
+a {
+    color: #000 !important;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
 /**fomulario*/
 textarea {
     width: 100%;
@@ -290,10 +296,10 @@ ul.post-categories a {
 
 
 .img_articulos_bg {
-  background-size: 100% !important;
+  background-size: 170% !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  height: 320px;
+  height: 395px;
   list-style: none;
   background-attachment: scroll !important;
 }
@@ -595,7 +601,7 @@ ul.post-categories a {
    color:#000;
    text-align: center;
    text-transform: uppercase;
-   padding: 0 10%;
+   padding: 0 44px;
 }
 
 .titulo-ultimo span{
@@ -1666,7 +1672,7 @@ input[type=email], textarea.materialize-textarea {
     letter-spacing: 3px;
   }
 
-  .contenido-slider-normal {
+  /*.contenido-slider-normal {
     font-family: 'Lato', sans-serif;
     color: #fff;
     font-size: 15px;
@@ -1678,7 +1684,7 @@ input[type=email], textarea.materialize-textarea {
     letter-spacing: 1px;
     line-height: normal;
     font-weight: 300;
-  }
+  }*/
   .slider-normal .bx-wrapper .bx-viewport {
     -moz-box-shadow: 0 0 5px #ccc;
     -webkit-box-shadow: 0 0 5px #ccc;
@@ -1787,14 +1793,14 @@ input[type=email], textarea.materialize-textarea {
     width: 100% !important;
     height: 290px;
 }
-  .bg-lombardi {
+  /*.bg-lombardi {
     background: url(images/fondo.png) no-repeat;
     background-size: cover;
     background-attachment: scroll !important;
     background-position: right right !important;
     max-width: 100%;
     height: 50em;
-  }
+  }*/
   .bg-historial {
     background: url(images/contacto.png) no-repeat;
     background-size: cover;
@@ -2729,7 +2735,7 @@ input[type=email], textarea.materialize-textarea {
     letter-spacing: 6px;
   }
 
-  .slider-normal .bx-wrapper .bx-viewport {
+  /*.slider-normal .bx-wrapper .bx-viewport {
     -moz-box-shadow: 0 0 5px #ccc;
     -webkit-box-shadow: 0 0 5px #ccc;
     box-shadow: 0 0 5px #ccc;
@@ -2742,7 +2748,7 @@ input[type=email], textarea.materialize-textarea {
     -o-transform: translatez(0);
     transform: translatez(0);
     height: 539px !important;
-  }
+  }*/
 
   .galeria-libro .bx-wrapper .bx-next {
     right: 35%;
@@ -2834,7 +2840,7 @@ input[type=email], textarea.materialize-textarea {
     height: 643px !important;
   }
   /**slider single**/
-  .slider-single-taps .bx-viewport {
+  /*.slider-single-taps .bx-viewport {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -2842,7 +2848,7 @@ input[type=email], textarea.materialize-textarea {
     background: transparent !important;
     border: 0px !important;
     box-shadow: none !important;
-  }
+  }*/
 
   .slider-single-taps .bx-wrapper .bx-next {
     right: 16%!important;
@@ -3159,10 +3165,10 @@ input[type=email], textarea.materialize-textarea {
   .sombrita{
   height: auto;
 }
-  .img_articulos_bg {
+  /*.img_articulos_bg {
      background-size: 145% !important;
     height: 268px;
-}
+}*/
   .video33 {
     width: 100%;
     height: 268px;
@@ -3265,7 +3271,7 @@ input[type=email], textarea.materialize-textarea {
 }
 .titulo-ultimo {  
   font-size: 17px;    
-  padding: 0 3%;
+  padding: 0 15px;
   background: #fff;
   opacity: .8;
 }
@@ -3298,8 +3304,8 @@ input[type=email], textarea.materialize-textarea {
 }
 /*ultimas entradas*/
 .titulo-ultimo {   
-  font-size: 21px;
-  padding: 0 6%;
+  font-size: 20px;
+  padding: 0 21px;
   background: #fff;
   opacity: .7;
 }
@@ -3320,6 +3326,9 @@ input[type=email], textarea.materialize-textarea {
 .imagen-lineaentradas {
   width: 60px !important;
 }
+.ultimas-notas {
+    margin: 24% auto;
+}
 /**/
 /*seccion libros*/
 .image-book {
@@ -3333,15 +3342,83 @@ input[type=email], textarea.materialize-textarea {
   background-size: 170% !important;
   background-position: 50% 50% !important;
   background-repeat: no-repeat !important;
-  height: 208px;
+  height: 270px;
   list-style: none;
   background-attachment: scroll !important;
+}
+
+.articulos-internos{
+  background-size: 170% !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+  height: 200px;
+  list-style: none;
+  background-attachment: scroll !important;
+}
+/*home*/
+.bg-lombardi {
+  height: 39em !important;
+}
+/*articulo interno*/
+.fondo-pagevideo2 {
+  height: 282px;
+}
+.slider-single-taps .bx-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 363px !important;
+    background: transparent !important;
+    border: 0px !important;
+    box-shadow: none !important;
+}
+/*helpers*/
+.margin-70 {
+  margin-top: 0px;
+}
+.nuevo-size-img{
+  height: 203px !important
+}
+/*slider normal*/
+.slider-normal .bx-wrapper .bx-viewport {
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;
+    left: -5px;
+    background: #fff;
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+    height: 450px !important;
+}
+.img-slider-normal {
+    z-index: 1;
+    width: 100%;
+    height: 450px;
+}
+.contenido-slider-normal {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 15px;
+    position: absolute;
+    z-index: 2;
+    top: 54%;
+    width: 87%;
+    left: 10%;
+    letter-spacing: 1px;
+    line-height: normal;
+    font-weight: 300;
+}
+
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
 
 .titulo-ultimo {
   font-size: 23px;
-  padding: 0 9%;
+  padding: 0 32px;
 }
 .articuloprincipalLugar {
   height: 290px;
@@ -3357,6 +3434,34 @@ input[type=email], textarea.materialize-textarea {
 }
 .imagen-lineaentradas {
   width: 66px !important;
+}
+.ultimas-notas {
+    margin: 29% auto;
+}
+/*home*/
+.bg-lombardi {
+  background: url(images/fondo_home.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 100%;
+  height: 44em;
+}
+/*articulos*/
+.articulos-internos{
+  background-size: 170% !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+  height: 270px;
+  list-style: none;
+  background-attachment: scroll !important;
+}
+.img_articulos_bg {
+    background-size: 170% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    height: 270px;
+    list-style: none;
+    background-attachment: scroll !important;
 }
 
 }
