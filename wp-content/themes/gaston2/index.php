@@ -8,9 +8,10 @@
        <?php echo do_shortcode('[text-blocks id="texto-home"]'); ?>
     </div>
   </div>
-  <div class="col l12 m12 s12 text-slider" style="padding:0px;">
-    <img src="<?php bloginfo('template_url'); ?>/images/manchas.png" class="mancha" alt="Gaston Lombardi">
-    <div class="col l4 m12 s12 relative margin-80 separacion-home">
+  <!-- video -->
+  <!-- <div class="col l12 m12 s12 text-slider" style="padding:0px;">
+    <img src="<?php /* bloginfo('template_url'); ?>/images/manchas.png" class="mancha" alt="Gaston Lombardi">
+    <div class="col l4 m12 s12 relative margin-80 separacion-home"> -->
        <?php echo do_shortcode('[text-blocks id="52"]'); ?>
     </div>
     <!--Est video -->
@@ -37,14 +38,14 @@
     <?php
         $count++;
         }
-        print_r($count);
+        print_r($count); */
         ?>
           </ul>
         </div>
       </div>
     </div>
-    <!--fin -->
-  </div>
+
+</div> -->
 
   <!--slider articulos-->
   <div class="col l12 m12 s12 destacados">
@@ -82,8 +83,7 @@
 	  			<?php
             if (has_post_thumbnail()) {
               $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-              //echo "<img src='". $url."' class='img_articulos_bg' />";
-              echo '<li class="img_articulos_bg" style="background: url('. $url.')">';
+              echo '<li class="img_articulos_bg nuevo-size-img" style="background: url('. $url.')">';
            }?>
          </div>
 	  			<div class="col l5 m5 s5 text-titulo nopadding">
@@ -146,7 +146,7 @@
             foreach ($posts_array as $key => $value){
              $src = wp_get_attachment_image_src( get_post_thumbnail_id($value->ID), 'full' );
                   $url= $src[0]; ?>
-          <li><a data-slide-index="<?php echo $cont; ?>" href=""><img src="<?php echo $url ?>" class="tubms" /></a></li>
+                <li><a data-slide-index="<?php echo $cont; ?>" href=""><img src="<?php echo $url ?>" class="tubms" /></a></li>
                <?php
                 $cont ++;
                } ?>
@@ -156,23 +156,57 @@
       </div>
       </div>
       <!--fin est-->
-
     </div>
 	</div>
   <div class="col l12 m12 s12" style="padding:0px;">
     <img src="<?php bloginfo('template_url'); ?>/images/linea2.png" alt="Gaston Lombardi" width="100%" class="absolute" style="margin-top: -100px;">
     <div class="col l12 m12 s12 margin-100">
-      <div class="col l12 m12 s12 relative">
-        <img src="<?php bloginfo('template_url'); ?>/images/ultimas1.png" alt="Gaston Lombardi" width="100%;">
+      <div class="col s12 m12 l10 offset-l1 relative">
+        <!-- <img src="<?php //bloginfo('template_url'); ?>/images/ultimas1.png" alt="Gaston Lombardi" width="100%;"> -->        
       </div>
     </div>
   </div>
 
 <div class="row">
+  <div class="col s12 m9 offset-m1 l9 offset-l1">
+    <fieldset>
+          <legend class="titulo-ultimo">últimas <span>entr</span>adas</legend>
+          <?php global $post;
+                $args = array( "posts_per_page" => 1, "offset"=> 0, "category" => 12 );
+                $myposts = get_posts( $args );
+                foreach( $myposts as $post ) : setup_postdata($post); ?>
+                 <a href="<?php the_permalink($post->ID); ?>">
+                <div class="col s12 m7 l6 offset-l1 div-fijo">
+               
+                <?php if (has_post_thumbnail()) { $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+                  //echo "<img src='". $url."' class='articuloprincipalLuga' />";
+                  echo '<li class="articuloprincipalLugar" style="background: url('. $url.')">';
+                    }?>
+                  
+                  <img src="<?php bloginfo('template_url') ?>/images/ultimas-lineas.png" class="imagen-lineaentradas">
+                  <div class="col s12 m10 l8 div-follow">
+                    <div class="col s12 m12 l12 center-align ultimas-notas">
+                      <div class="col s12 m12 l12 fecha-titulo-ultima">
+                        <p>Life Style//<?php echo get_the_date( get_option('date_format') ); ?></p>
+                      </div>
+                      <div class="s12 m12 l12 ultimo-titulo">
+                        
+                          <?php the_title(); ?>
+                        </a>
+                      </div>         
+                    </div>                       
+                  </div>
+              </div>
+         <?php endforeach; ?>
+        </fieldset>
+  </div>
+</div>
+
+<div class="row separacion-ultimas">
     <div class="col l12 m12 s12 articulos_gaston bgarticulos_home">
     <?php
     global $post;
-    $args = array( "posts_per_page" => 3, "offset"=> 0, "category" => 12 );
+    $args = array( "posts_per_page" => 3, "offset"=> 1, "category" => 12 );
     $myposts = get_posts( $args );
     foreach( $myposts as $post ) : setup_postdata($post); ?>
     <div class="col l4 m6 s12 size relative bglombardi">
@@ -183,7 +217,7 @@
             if (has_post_thumbnail()) {
               $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
               //echo "<img src='". $url."' class='img_articulos_bg' />";
-              echo '<li class="img_articulos_bg" style="background: url('. $url.')">';
+              echo '<li class="img_articulos_bg nuevo-size-img" style="background: url('. $url.')">';
            }?>
          </div>
           <div class="col l5 m5 s5 text-titulo nopadding">

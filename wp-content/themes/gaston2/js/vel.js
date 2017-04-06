@@ -43,30 +43,31 @@ $(document).ready(function(){
 });
 
 // galeria video
- $(document).ready(function(){
-    $('.bxsliderr').bxSlider({    
-      pagerCustom: '#bx-pagerr'
-    });
-    $('#slider4').bxSlider({
-      slideWidth: 200,
-      minSlides: 1,
-      maxSlides: 4,
-      auto: true,
-      autoControls: false,
-      pause: 3000,
-      slideMargin: 20
-    });
-  });
+ // $(document).ready(function(){
+ //    $('.bxsliderr').bxSlider({    
+ //      pagerCustom: '#bx-pagerr'
+ //    });
+ //    $('#slider4').bxSlider({
+ //      slideWidth: 200,
+ //      minSlides: 1,
+ //      maxSlides: 4,
+ //      auto: true,
+ //      autoControls: false,
+ //      pause: 3000,
+ //      slideMargin: 20
+ //    });
+ //  });
 
 // slider normal
 /*$(document).ready(function(){
 	$('.bxslider3').bxSlider();
 	auto: true
 });*/
+//slider articulos destacados
 $('#slider3').bxSlider({
   auto: true,
   autoControls: true,
-  pause: 3000
+  pause: 15000
 })
 
 
